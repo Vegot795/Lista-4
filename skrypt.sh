@@ -14,7 +14,12 @@ create_logs() {
 	done
 }
 
-
+display_help() {
+	echo "Użycie: $0 [OPCKJA]"
+	echo "Dostepne dla uzytkownika opcje:"
+	echo " -- date, Wyswietla date."
+	echo " -- logs [liczba} tworzy podana liczbe plikow. Domyslna wartosc - 100"
+	echo " -- help Wyswietla pomoc dotyczaca opcji"
 
 case "$1" in 
 	--date)
@@ -22,5 +27,8 @@ case "$1" in
 		;;
 	--logs)
 		create_logs "$2"
+		;;
+	--help) 
+		display_help
 		;;
 esac
